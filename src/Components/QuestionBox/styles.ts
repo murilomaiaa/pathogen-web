@@ -19,7 +19,7 @@ export const Radio = styled.button<RadioProps>`
   border: 2px solid #487eb0;
   width: 100%;
   height: 50px;
-  margin: 8px;
+  margin: 8px 0;
 
   ${props =>
     props.selected &&
