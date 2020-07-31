@@ -22,7 +22,7 @@ const Index: React.FC = () => {
           </p>
         </div>
         <div id="btn">
-          <Link to="clientForm">
+          <Link to="form">
             <button type="button">Participar da triagem</button>
           </Link>
         </div>
