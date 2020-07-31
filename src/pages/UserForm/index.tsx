@@ -49,7 +49,7 @@ const UserForm: React.FC = () => {
                 </option>
                 <option value="M">Homem</option>
                 <option value="F">Mulher</option>
-                <option value="O">Outros/prefiro não ddizer</option>
+                <option value="O">Outros/prefiro não dizer</option>
               </select>
             </div>
             <div className="form-group col-sm-6">
