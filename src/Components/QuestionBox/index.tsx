@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 import { Container, Radio } from './styles';
 
@@ -13,7 +13,6 @@ const QuestionBox: React.FC<Question> = ({
   isBinary = true,
   numberOfLevels = 1,
 }) => {
-  const [questionIndex, setQuestionIndex] = useState(1);
   const [selectedButton, setSelectedButton] = useState('');
 
   return (
@@ -45,7 +44,7 @@ const QuestionBox: React.FC<Question> = ({
               setSelectedButton('falseButton');
             }}
             selected={
-              document.querySelector('#falseButton')?.getAttribute('id') ==
+              document.querySelector('#falseButton')?.getAttribute('id') ===
               selectedButton
             }
           >
