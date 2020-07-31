@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { ButtonHTMLAttributes } from 'react';
-import { shade } from 'polished';
 
 export const Container = styled.div`
   margin-top: 36px;
