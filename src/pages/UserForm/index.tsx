@@ -10,7 +10,9 @@ const UserForm: React.FC = () => {
 
   const handleSubmit = useCallback((e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    console.log('data');
+    // {() => {
+    window.location.href = '/questions';
+    // }}
   }, []);
   return (
     <>
@@ -28,11 +30,17 @@ const UserForm: React.FC = () => {
                 className="form-control"
                 type="text"
                 placeholder="Digite seu nome"
+                required
               />
             </div>
             <div className="form-group col-sm-6">
-              <select className="form-control" id="isSick">
-                <option value="" disabled selected>
+              <select
+                className="form-control"
+                id="isSick"
+                defaultValue="D"
+                required
+              >
+                <option value="D" disabled>
                   Você foi diagnosticado com covid?
                 </option>
                 <option value="true">Sim, fui diagnosticado</option>
@@ -43,8 +51,13 @@ const UserForm: React.FC = () => {
 
           <div className="row">
             <div className="form-group col-sm-6">
-              <select className="form-control" id="isSick">
-                <option disabled selected value="">
+              <select
+                className="form-control"
+                id="isSick"
+                defaultValue="D"
+                required
+              >
+                <option disabled value="D">
                   Informe seu sexo
                 </option>
                 <option value="M">Homem</option>
@@ -58,6 +71,7 @@ const UserForm: React.FC = () => {
                 className="form-control"
                 type="text"
                 placeholder="Digite sua idade"
+                required
               />
             </div>
           </div>
@@ -68,6 +82,7 @@ const UserForm: React.FC = () => {
                 className="form-control"
                 id="email"
                 placeholder="Digite seu email"
+                required
                 aria-describedby="emailHelp"
               />
               <small id="emailHelp" className="form-text text-muted">
@@ -77,11 +92,11 @@ const UserForm: React.FC = () => {
           </div>
           <div className="form-group row">
             <div className="col-sm-10">
-              <Link to="/questions">
-                <button type="submit" className="btn btn-primary">
-                  Responder formulário
-                </button>
-              </Link>
+              {/* <Link to="/questions"> */}
+              <button type="submit" className="btn btn-primary">
+                Responder formulário
+              </button>
+              {/* </Link> */}
             </div>
           </div>
         </Form>
